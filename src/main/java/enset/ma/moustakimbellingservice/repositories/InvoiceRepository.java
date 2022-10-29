@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface InvoiceRepository extends JpaRepository<Invoice,String> {
 
-    List<Invoice> findByCliendId(String clientdId);
+    List<Invoice> findByCustomerId(String customerId);
 }

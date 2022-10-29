@@ -1,5 +1,6 @@
-package enset.ma.moustakimbellingservice.entities;
+package enset.ma.moustakimbellingservice.dtos;
 
+import enset.ma.moustakimbellingservice.entities.Customer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,14 +11,9 @@ import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Entity
+
 @Data @AllArgsConstructor @NoArgsConstructor
-public class Invoice {
-    @Id
-    private String id;
-    private Date date;
+public class InvoiceRequestDTO {
     private BigDecimal amount;
     private String customerId;
-    @Transient
-    private Customer customer;
 }
